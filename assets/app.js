@@ -18,3 +18,7 @@ import './js/doclinks.js';
 import './bootstrap';
 
 import './js/flatpicker';
+
+import { registerVueControllerComponents } from '@symfony/ux-vue';
+
+registerVueControllerComponents(require.context('./vue/controllers', true, /\.vue$/));

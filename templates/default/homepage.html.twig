@@ -14,6 +14,8 @@
         <h1>{{ 'title.homepage'|trans|raw }}</h1>
     </div>
 
+    <div {{ vue_component('Hello', { 'name': app.user.fullName }) }}>...loading</div>
+
     <div class="row">
         <div class="col-sm-6">
             <div class="jumbotron">
