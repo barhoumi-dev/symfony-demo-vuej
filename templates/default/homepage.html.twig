@@ -14,7 +14,9 @@
         <h1>{{ 'title.homepage'|trans|raw }}</h1>
     </div>
 
-    <div {{ vue_component('Hello', { 'name': app.user.fullName }) }}>...loading</div>
+    {% if app.user %}
+        <div {{ vue_component('Hello', {'user': { 'name': app.user.fullName, 'email': app.user.email } }) }}>...loading</div>
+    {% endif %}
 
     <div class="row">
         <div class="col-sm-6">

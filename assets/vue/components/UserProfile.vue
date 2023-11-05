@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import UserProfile from "@/components/UserProfile.vue";
-
 import type {User} from "@/types/user";
 
 defineProps<{
@@ -9,7 +7,8 @@ defineProps<{
 </script>
 
 <template>
-  <div class="alert alert-primary">
-    <UserProfile :user="user"></UserProfile>
+  <div>
+    <div>Hello {{ user.name }}!</div>
+    <div>{{ user.email }}</div>
   </div>
 </template>

@@ -1,4 +1,5 @@
 const Encore = require('@symfony/webpack-encore');
+const {resolve} = require("path");
 
 // Manually configure the runtime environment if not already configured yet by the "encore" command.
 // It's useful when you use tools that rely on webpack.config.js file.
@@ -69,11 +70,16 @@ Encore
     .enableSassLoader()
 
     // uncomment if you use TypeScript
-    //.enableTypeScriptLoader()
+    .enableTypeScriptLoader((config) => {
+            config.appendTsSuffixTo =  [/\.vue$/];
+            config.transpileOnly = true;
+    })
 
     // uncomment if you use VueJs
     .enableVueLoader(() => {}, { runtimeCompilerBuild: false })
-
+    .addAliases({
+        '@': resolve('./assets/vue/')
+    })
 
     // uncomment if you use React
     //.enableReactPreset()
