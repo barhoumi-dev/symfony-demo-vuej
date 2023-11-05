@@ -22,3 +22,25 @@ import './js/flatpicker';
 import { registerVueControllerComponents } from '@symfony/ux-vue';
 
 registerVueControllerComponents(require.context('./vue/controllers', true, /\.vue$/));
+
+// Vuetify
+import '@mdi/font/css/materialdesignicons.css'
+import 'vuetify/styles'
+import { createVuetify } from 'vuetify'
+import * as components from 'vuetify/components'
+import * as directives from 'vuetify/directives'
+document.addEventListener('vue:before-mount', (event) => {
+    const {
+        componentName, // The Vue component's name
+        component, // The resolved Vue component
+        props, // The props that will be injected to the component
+        app, // The Vue application instance
+    } = event.detail;
+
+    const vuetify = createVuetify({
+        components,
+        directives
+    })
+
+    app.use(vuetify);
+});

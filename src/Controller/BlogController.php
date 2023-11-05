@@ -54,6 +54,13 @@ final class BlogController extends AbstractController
         if ($request->query->has('tag')) {
             $tag = $tags->findOneBy(['name' => $request->query->get('tag')]);
         }
+
+        if ($_format === 'html'){
+            return $this->render('blog/index.html.twig', [
+                'tag' => $tag,
+            ]);
+        }
+
         $latestPosts = $posts->findLatest($page, $tag);
 
         // Every template name also has two extensions that specify the format and

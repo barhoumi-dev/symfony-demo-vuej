@@ -29,8 +29,10 @@
         "ts-loader": "^9.0.0",
         "typeahead.js": "^0.11.1",
         "typescript": "^5.2.2",
+        "vite-plugin-vuetify": "^1.0.2",
         "vue": "^3.0",
         "vue-loader": "^17.3.1",
+        "vuetify": "^3.3.23",
         "webpack": "^5.89",
         "webpack-cli": "^5.1.1",
         "webpack-notifier": "^1.15.0"
@@ -42,5 +44,8 @@
         "dev": "encore dev",
         "watch": "encore dev --watch",
         "build": "encore production --progress"
+    },
+    "dependencies": {
+        "@mdi/font": "^7.3.67"
     }
 }
