@@ -14,7 +14,6 @@
     },
     "require": {
         "php": ">=8.2",
-        "ext-pdo_sqlite": "*",
         "api-platform/core": "^3.2",
         "doctrine/dbal": "^3.1",
         "doctrine/doctrine-bundle": "^2.8",
