@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {Post} from "@/types/post";
+import type {Post} from "@/types/post";
 import PostTags from "@/components/posts/PostTags.vue";
 
 defineProps<{

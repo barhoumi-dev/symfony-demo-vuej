@@ -17,7 +17,7 @@ async function getData() {
   isLoading.value = false
 }
 
-function updatePage(pageIndex: Number) {
+function updatePage(pageIndex: Int) {
   console.log(pageIndex);
   page.value = pageIndex;
 
