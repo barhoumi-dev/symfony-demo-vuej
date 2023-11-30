@@ -55,7 +55,7 @@ final class BlogController extends AbstractController
             $tag = $tags->findOneBy(['name' => $request->query->get('tag')]);
         }
 
-        if ('html' === $_format){
+        if ('html' === $_format) {
             return $this->render('blog/index.html.twig', [
                 'tag' => $tag,
             ]);
