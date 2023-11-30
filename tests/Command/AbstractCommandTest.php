@@ -33,7 +33,7 @@ abstract class AbstractCommandTest extends KernelTestCase
         // this uses a special testing container that allows you to fetch private services
         /** @var Command $command */
         $command = static::getContainer()->get($this->getCommandFqcn());
-        assert(self::$kernel !== null);
+        \assert(null !== self::$kernel);
         $command->setApplication(new Application(self::$kernel));
 
         $commandTester = new CommandTester($command);

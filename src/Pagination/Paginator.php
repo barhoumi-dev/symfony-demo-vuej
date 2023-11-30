@@ -67,7 +67,7 @@ final class Paginator
         $useOutputWalkers = \count($havingDqlParts ?: []) > 0;
         $paginator->setUseOutputWalkers($useOutputWalkers);
 
-        /** @var \Traversable $iterator */
+        /** @var \Traversable<int, object> $iterator */
         $iterator = $paginator->getIterator();
         $this->results = $iterator;
         $this->numResults = $paginator->count();
