@@ -55,6 +55,6 @@ volumes:
   caddy_config:
   ###> doctrine/doctrine-bundle ###
   database_data:
-  ###< doctrine/doctrine-bundle ###
+###< doctrine/doctrine-bundle ###
 ###> symfony/mercure-bundle ###
 ###< symfony/mercure-bundle ###
